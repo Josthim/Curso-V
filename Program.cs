@@ -1,50 +1,17 @@
-﻿using ConsoleApp1;
-public class ConsolaImpuestos
+namespace WinFormsApp1
 {
-    public static  void Main(String[]args)
+    internal static class Program
     {
-        Imp im = new Imp();
-        double[] S; double[] P; double[] L;
-        S = new double[10];
-        P = new double[10];
-        L = new double[10];
-        int ind = 0; int ce;
-
-        do
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-
-            ce = im.Validar("Cantidad de elementos");
-
-        }while (ce <= 0 || ce > 10);
-        for (ind = 0; ind < ce; ind++)
-        {
-            do
-            {
-
-
-                S[ind] = im.Validar("Valor;");
-                im.setIng(S);
-            } while (S[ind]<4800 || S[ind]> 500000);
-            P[ind] = S[ind] * 0.07;
-            L[ind] = S[ind] * 0.22;
-        }  
-
-        for (ind = 0; ind < ce; ind++ )
-        {
-            
-            Console.WriteLine("\t" + S[ind]);
-
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new MDI());
         }
-        for (ind = 0; ind < ce; ind++)
-        {
-            Console.WriteLine("\t" + P[ind]);
-
-        }
-        for (ind = 0; ind < ce; ind++)
-        {
-            Console.WriteLine("\t" +L[ind]);
-
-        }
-
     }
 }
