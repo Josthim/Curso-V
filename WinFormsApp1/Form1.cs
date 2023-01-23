@@ -10,6 +10,7 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox2.Enabled = false;   
+            textBox3.Enabled = false;   
 
         }
 
@@ -40,7 +41,12 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult r = MessageBox.Show("ESTA SEGURO DE SALIR",
+                                 "Calcular Inns Laboral",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+                this.Close();
         }
 
 
@@ -55,5 +61,8 @@ namespace WinFormsApp1
 
 
         }
+
     }
 }
+
+

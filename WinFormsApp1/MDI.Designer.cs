@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ejemplosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.innsLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // ejemplosToolStripMenuItem
             // 
             this.ejemplosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.innsLToolStripMenuItem});
+            this.innsLToolStripMenuItem,
+            this.utilidadToolStripMenuItem});
             this.ejemplosToolStripMenuItem.Name = "ejemplosToolStripMenuItem";
             this.ejemplosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.ejemplosToolStripMenuItem.Text = "Ejemplos";
@@ -58,6 +60,13 @@
             this.innsLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.innsLToolStripMenuItem.Text = "InnsL";
             this.innsLToolStripMenuItem.Click += new System.EventHandler(this.innsLToolStripMenuItem_Click);
+            // 
+            // utilidadToolStripMenuItem
+            // 
+            this.utilidadToolStripMenuItem.Name = "utilidadToolStripMenuItem";
+            this.utilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.utilidadToolStripMenuItem.Text = "Utilidad";
+            this.utilidadToolStripMenuItem.Click += new System.EventHandler(this.utilidadToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -81,5 +90,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem ejemplosToolStripMenuItem;
         private ToolStripMenuItem innsLToolStripMenuItem;
+        private ToolStripMenuItem utilidadToolStripMenuItem;
     }
 }

@@ -13,6 +13,7 @@ namespace WinFormsApp1
     public partial class MDI : Form
     {
         Form1 x = new Form1();
+        Form2 x2 = new Form2();
         public MDI()
         {
             InitializeComponent();
@@ -22,6 +23,13 @@ namespace WinFormsApp1
         {
             x.MdiParent = this;
             x.Show();
+
+        }
+
+        private void utilidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            x2.MdiParent = this;
+            x2.Show();
 
         }
     }
