@@ -11,14 +11,17 @@ namespace pjPrueba
         {
             textBox5.Enabled = false;
             textBox6.Enabled = false;
+            textBox2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             double ing, egr, monto, util, cuota, plazo,utpor;
+            string r, a;
 
 
-            if (textBox1.Text == "" || maskedTextBox1.Text == "" || maskedTextBox2.Text == "" || maskedTextBox3.Text == "")
+            if (textBox1.Text == "" || maskedTextBox1.Text == "" || maskedTextBox2.Text == "" || maskedTextBox3.Text == ""
+                || comboBox1.Text == "" || comboBox2.Text == "")
             {
                 MessageBox.Show("No se permite espacios.");
                 maskedTextBox1.Focus();
@@ -37,40 +40,41 @@ namespace pjPrueba
                         util = ing - egr;
                         textBox6.Text = util.ToString();
 
-                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("rango entre 500 y 10000", "Error");
-                        maskedTextBox1.Text = "";
-                        maskedTextBox1.Focus();
+                        utpor = util * 0.35;
 
-                    }
-
-                    if (monto < 100 || monto > 5000)
-                    {
-                        MessageBox.Show("rango entre 100 y 5000", "Error");
-                        maskedTextBox3.Text = "";
-                        maskedTextBox3.Focus();
-                    }
-                    else
-                    {
                         cuota = monto / plazo;
                         textBox5.Text = cuota.ToString();
+                         if (cuota < utpor)
+                         {
+                            r = " Es Sujeto a Crédito";
+                            textBox2.Text = r.ToString();
+                         }
+                         else
+                         {
+                            a = " No es Sujeto a Crédito";
+                            textBox2.Text = a.ToString();
+                         }
+
 
                     }
-                util = double.Parse(textBox6.Text);
-                utpor = double.Parse(textBox2.Text);
-                if (util > utpor)
-                {
-                   
-                    utpor = util * 0.35;
-                    textBox2.Text = utpor.ToString();
+                    else
+                    {
+                        MessageBox.Show("El Egreso no puede ser mayor a Ingreso", "Error");
+                        maskedTextBox2.Text = "";
+                        maskedTextBox2.Focus();
 
-                }
+
+
+                    }
+                    else if (monto < 100 || monto > 5000)
+                    {
+                            MessageBox.Show("rango entre 100 y 5000", "Error");
+                            maskedTextBox3.Text = "";
+                            maskedTextBox3.Focus();
+                    }
+                        
+
                     
-                                    
-
             }
         }
 
@@ -95,16 +99,5 @@ namespace pjPrueba
             if (r == DialogResult.Yes)
                 this.Close();
         }
-
-
-
-
     }
 }
-
-
-
-
-
-
-

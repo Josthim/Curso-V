@@ -32,3 +32,4 @@ E:\Prueba1\pjPrueba\obj\Debug\net6.0-windows\refint\pjPrueba.dll
 E:\Prueba1\pjPrueba\obj\Debug\net6.0-windows\pjPrueba.pdb
 E:\Prueba1\pjPrueba\obj\Debug\net6.0-windows\pjPrueba.genruntimeconfig.cache
 E:\Prueba1\pjPrueba\obj\Debug\net6.0-windows\ref\pjPrueba.dll
+E:\Prueba1\pjPrueba\obj\Debug\net6.0-windows\pjPrueba.Properties.Resources.resources
